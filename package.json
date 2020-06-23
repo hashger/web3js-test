@@ -1,0 +1,22 @@
+{
+  "name": "web3js-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "createAcount.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashger/web3js-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hashger/web3js-test/issues"
+  },
+  "homepage": "https://github.com/hashger/web3js-test#readme",
+  "dependencies": {
+    "web3": "^1.2.9"
+  }
+}
