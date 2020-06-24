@@ -10,6 +10,7 @@ web3.eth.getBalance(address,function(err, bal){
     {balance = bal};
     console.log('Wei',balance);
     etherBalance = web3.utils.fromWei(balance, 'ether');
+    console.log(typeof balance)
     console.log('Ethers: ',etherBalance);
 });
 
