@@ -7,7 +7,6 @@ const web3 = new Web3('https://ropsten.infura.io/v3/3fece7f41eef4ec3a6df8be272f0
 
 const myPrivateKey1 = Buffer.from('2aa8c94b2c10ef20e588f1b03412967f7e7393ea80f0ebf15ccf548ce25e110f', 'hex');
 const myAddress1 = '0x1190b47793C750C4fE6d6e51250E5351602EBb03';
-
 const myPrivateKey2 = Buffer.from('f4b099457326d229a6cf723e2679e6484cbc0adf16d3d11a48e3457ba3b0ce23', 'hex');
 const myAddress2 = '0xB6f1e6Ef4bbaE398E5Cd39caCb009137F4Ee4e99';
 /*
@@ -29,7 +28,7 @@ web3.eth.getTransactionCount(myAddress2,(err,txCount)=>{
     const txObject = {
         nonce: web3.utils.toHex(txCount),
         to: myAddress1,
-        value: web3.utils.toHex(web3.utils.toWei('1', 'ether')),
+        value: web3.utils.toHex(web3.utils.toWei('2', 'ether')),
         gasLimit:web3.utils.toHex(21000),
         gasPrice:web3.utils.toHex(web3.utils.toWei('10', 'gwei')),
     }
@@ -47,13 +46,3 @@ web3.eth.getTransactionCount(myAddress2,(err,txCount)=>{
     });
 })
 
-
-// BUILD TX
-
-
-
-
-/*/ SIGN TX
-
-})
-*/
