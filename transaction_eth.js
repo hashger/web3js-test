@@ -44,5 +44,5 @@ web3.eth.getTransactionCount(myAddress2,(err,txCount)=>{
     web3.eth.sendSignedTransaction(raw, (err, txHash)=>{
         console.log('txHash:', txHash);
     });
-})
+});
 

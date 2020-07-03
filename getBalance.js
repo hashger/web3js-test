@@ -6,7 +6,7 @@ let web3 = new Web3(url);
 let address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
 /*
 console.log(web3.eth.getBalance(address,(err, bal)=> {balance = bal})); */
-web3.eth.getBalance(address,function(err, bal){
+web3.eth.getBalance(address,(err, bal)=>{
     {balance = bal};
     console.log('Wei',balance);
     etherBalance = web3.utils.fromWei(balance, 'ether');
@@ -14,3 +14,4 @@ web3.eth.getBalance(address,function(err, bal){
     console.log('Ethers: ',etherBalance);
 });
 
+console.log(web3.utils.unitMap);
