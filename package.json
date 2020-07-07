@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hashger/web3js-test#readme",
   "dependencies": {
     "ethereumjs-tx": "^2.1.2",
+    "node-fetch": "^2.6.0",
     "web3": "^1.2.9"
   }
 }
