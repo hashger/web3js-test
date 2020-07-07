@@ -6,6 +6,7 @@ const web3 = new Web3(
 
 const URL = "https://ethgasstation.info/api/ethgasAPI.json";
 
+
 function ethTxSpeed(speedness) {
    fetch(URL)
     .then((response) => response.json())
@@ -25,3 +26,29 @@ function ethTxSpeed(speedness) {
 }
 
 console.log(ethTxSpeed("fast"));
+
+
+/*
+function ethTxSpeed_(speedness){
+    switch (speedness) {
+        case "fast":
+          return  fetch(URL)
+          .then((response) => response.json())
+            .then((data) => data.fastest * 100_000_000);
+          break;
+        case "medium":
+            return  fetch(URL)
+            .then((response) => response.json())
+              .then((data) => data.fast * 100_000_000);
+            break;
+        case "slow":
+            return  fetch(URL)
+            .then((response) => response.json())
+              .then((data) => data.safeLow * 100_000_000);
+            break;
+      }
+    return 'fast';
+}
+
+console.log(ethTxSpeed_('fast');)
+*/
