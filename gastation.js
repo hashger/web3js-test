@@ -6,14 +6,15 @@ const web3 = new Web3(
 
 const URL = "https://ethgasstation.info/api/ethgasAPI.json";
 
-
 function ethTxSpeed(speedness) {
-   fetch(URL)
+  return fetch(URL)
     .then((response) => response.json())
     .then((data) => {
+      let datanew = 0;
       switch (speedness) {
         case "fast":
-          return data.fastest * 100_000_000;
+          //return data.fastest * 100_000_000;
+          datanew = data.fastest * 100_000_000;
           break;
         case "medium":
           return data.fast * 100_000_000;
@@ -22,17 +23,21 @@ function ethTxSpeed(speedness) {
           return data.safeLow * 100_000_000;
           break;
       }
+      return data;
     });
 }
 
-console.log(ethTxSpeed("fast"));
+//console.log(ethTxSpeed("fast"));
+
+//let gasPrices;
+//let  gasStation = fetch(URL).then((response)=>response.json()).then((data)=> { gasPrices = data});
 
 
-/*
-function ethTxSpeed_(speedness){
+async function ethTxSpeed_(speedness){
+
     switch (speedness) {
-        case "fast":
-          return  fetch(URL)
+        case "fast": 
+          fetch(URL)
           .then((response) => response.json())
             .then((data) => data.fastest * 100_000_000);
           break;
@@ -47,8 +52,14 @@ function ethTxSpeed_(speedness){
               .then((data) => data.safeLow * 100_000_000);
             break;
       }
-    return 'fast';
 }
 
-console.log(ethTxSpeed_('fast');)
-*/
+//console.log(ethTxSpeed_('fast'))
+
+async function gasStation(speedness, callback){
+    return fetch(URL)
+    .then((response) => response.json())
+      .then((data) => {
+         callback(data[speedness] * 100_000_000)
+        });
+}

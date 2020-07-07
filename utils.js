@@ -4,6 +4,7 @@ const web3 = new Web3(url)
 
 web3.eth.getGasPrice().then((gasInWei)=>{
     console.log(web3.utils.fromWei(gasInWei,'gwei'), 'gweis')
+    console.log('gasinWei',gasInWei);
 })
 
 //console.log(web3.utils.keccak256('obo'))
